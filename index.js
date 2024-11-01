@@ -3,7 +3,6 @@ import { parse } from "acorn";
 import { parse as parseLoose } from "acorn-loose";
 import { generate } from "astring";
 import { ancestor as walk } from "acorn-walk";
-import { oldEclipseRewriter } from "./oldEclipseRewriter.js";
 
 const require = createRequire(import.meta.url);
 const detect = require("acorn-globals");
@@ -117,9 +116,9 @@ const exampleObject = {
 }
 console.log(exampleObject.realLocation)
 
-function getLocation(location, self, window) {
+function getLocation(location) {
   console.log(location)
-  console.log(self, window, globalThis)
+  console.log(window)
 }
 
 getLocation(location)
@@ -128,5 +127,3 @@ export * as test from "https://somewebsite.com/test.js"
 `;
 
 console.log(rewrite(code));
-//old Eclipse JS rewriter for testing
-//console.log(oldEclipseRewriter(code));
