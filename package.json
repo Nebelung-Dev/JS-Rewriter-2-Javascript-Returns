@@ -1,0 +1,19 @@
+{
+  "name": "js-rewriter-2-javascript-returns",
+  "version": "1.0.0",
+  "description": "Another POC Javascript rewriter",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Nebelung",
+  "dependencies": {
+    "acorn": "^8.14.0",
+    "acorn-globals": "^7.0.1",
+    "acorn-loose": "^8.4.0",
+    "acorn-walk": "^8.3.4",
+    "astring": "^1.9.0"
+  }
+}
